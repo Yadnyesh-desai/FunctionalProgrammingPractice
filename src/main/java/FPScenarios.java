@@ -64,4 +64,11 @@ public class FPScenarios {
                 })
                 .collect(Collectors.toList());
     }
+    
+    public int sum(List<Integer> numbers) {
+    	return numbers.stream()
+    		.sorted()
+    		.distinct()
+    		.reduce(0, Integer::sum);
+    	}
 }

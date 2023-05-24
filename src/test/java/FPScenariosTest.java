@@ -54,6 +54,11 @@ class FPScenariosTest {
     void primeNumbers() {
         assertEquals(List.of(2, 3, 5), fpScenariosTest.primeNumbers(numbersTest));
     }
+    
+    @Test
+    void sum() {
+        assertEquals(21, fpScenariosTest.sumOfOdds(numbersTest));
+    }
 
     @AfterEach
         //  analogous to JUnit 4’s @After
