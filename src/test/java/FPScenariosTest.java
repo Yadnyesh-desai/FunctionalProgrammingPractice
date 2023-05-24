@@ -7,7 +7,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class FPScenariosTest {
-    
+
     private final FPScenarios fpScenariosTest = new FPScenarios();
     private final List<String> namesTest = new ArrayList<>(List.of("Adam", "Andrew", "Alice", "Bob", "Brook"));
     private final List<Integer> numbersTest = new ArrayList<>(List.of(1, 3, 5, 2, 4, 6));
@@ -26,7 +26,7 @@ class FPScenariosTest {
     void startsWithFilter() {
         //  assertEquals(expectedResult, actualResult)
         assertEquals(List.of("Adam", "Alice", "Andrew"), fpScenariosTest.startsWithFilter(namesTest, "a"));
-//        fail("Not implemented yet");
+//        fail("Not implemented yet");  //  explicitly fails the test
     }
 
     @Test
