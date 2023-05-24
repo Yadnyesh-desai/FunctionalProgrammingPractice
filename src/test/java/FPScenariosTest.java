@@ -17,7 +17,8 @@ class FPScenariosTest {
         System.out.println("beforeAll @BeforeAll");
     }
 
-    @BeforeEach //  analogous to JUnit 4’s @Before
+    @BeforeEach
+        //  analogous to JUnit 4’s @Before
     void setUp() {
         System.out.println("setUp @BeforeEach");
     }
@@ -49,7 +50,13 @@ class FPScenariosTest {
         assertEquals(9, fpScenariosTest.sumOfOdds(numbersTest));
     }
 
-    @AfterEach  //  analogous to JUnit 4’s @After
+    @Test
+    void primeNumbers() {
+        assertEquals(List.of(2, 3, 5), fpScenariosTest.primeNumbers(numbersTest));
+    }
+
+    @AfterEach
+        //  analogous to JUnit 4’s @After
     void tearDown() {
         System.out.println("tearDown @AfterEach");
     }

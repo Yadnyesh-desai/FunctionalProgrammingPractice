@@ -22,5 +22,6 @@ public class Main {
         System.out.println("List of odd numbers = " + fpScenarios.getOddNumbers(numbers));
         System.out.println("Sum of even numbers = " + fpScenarios.sumOfEvens(numbers));
         System.out.println("Sum of odd numbers = " + fpScenarios.sumOfOdds(numbers));
+        System.out.println("Prime numbers = " + fpScenarios.primeNumbers(numbers));
     }
 }
