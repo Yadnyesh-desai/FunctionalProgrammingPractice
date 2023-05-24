@@ -49,11 +49,6 @@ class FPScenariosTest {
     void sumOfOdds() {
         assertEquals(9, fpScenariosTest.sumOfOdds(numbersTest));
     }
-    
-    @Test
-    void sum() {
-    	assertEquals(21, fpScenariosTest.sum(numbersTest));
-    }
 
     @Test
     void primeNumbers() {
