@@ -4,7 +4,7 @@ import org.junit.jupiter.api.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 class FPScenariosTest {
 
@@ -31,8 +31,11 @@ class FPScenariosTest {
     }
 
     @Test
+    @DisplayName("Get even numbers")
     void getEvenNumbers() {
-        assertEquals(List.of(2, 4, 6), fpScenariosTest.getEvenNumbers(numbersTest));
+        assertAll(() -> assertEquals(List.of(2, 4, 6), fpScenariosTest.getEvenNumbers(numbersTest)),
+                () -> assertEquals(List.of(10, 14, 50), fpScenariosTest.getEvenNumbers(List.of(10, 50, 35, 23, 14))),
+                () -> assertNotEquals(List.of(14, 10, 50), fpScenariosTest.getEvenNumbers(List.of(10, 50, 35, 23, 14))));
     }
 
     @Test
@@ -54,7 +57,7 @@ class FPScenariosTest {
     void primeNumbers() {
         assertEquals(List.of(2, 3, 5), fpScenariosTest.primeNumbers(numbersTest));
     }
-    
+
     @Test
     void sum() {
         assertEquals(21, fpScenariosTest.sum(numbersTest));
