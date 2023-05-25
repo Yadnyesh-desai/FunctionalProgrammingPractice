@@ -57,7 +57,7 @@ class FPScenariosTest {
     
     @Test
     void sum() {
-        assertEquals(21, fpScenariosTest.sumOfOdds(numbersTest));
+        assertEquals(21, fpScenariosTest.sum(numbersTest));
     }
 
     @AfterEach
