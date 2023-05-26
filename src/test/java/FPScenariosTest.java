@@ -39,8 +39,11 @@ class FPScenariosTest {
     }
 
     @Test
+    @DisplayName("Get Odd numbers")
     void getOddNumbers() {
-        assertEquals(List.of(13, 15, 17), fpScenariosTest.getOddNumbers(List.of(17, 13, 12, 16, 90, 15)));
+        assertAll(() -> assertEquals(List.of(13, 15, 17), fpScenariosTest.getOddNumbers(List.of(17, 13, 12, 16, 90, 15))),
+                () -> assertEquals(List.of(11, 15, 23, 55), fpScenariosTest.getOddNumbers(List.of(11, 50, 55, 23, 15))),
+                () -> assertNotEquals(List.of(14, 10, 50), fpScenariosTest.getOddNumbers(List.of(10, 50, 35, 23, 14))));
     }
 
     @Test
