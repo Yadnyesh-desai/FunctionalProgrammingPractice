@@ -41,6 +41,7 @@ class FPScenariosTest {
     @Test
     void getOddNumbers() {
         assertEquals(List.of(13, 15, 17), fpScenariosTest.getOddNumbers(List.of(17, 13, 12, 16, 90, 15)));
+        //  Add more unit tests
     }
 
     @Test
