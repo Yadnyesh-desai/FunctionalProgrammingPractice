@@ -27,6 +27,8 @@ class FPScenariosTest {
     void startsWithFilter() {
         //  assertEquals(expectedResult, actualResult)
         assertEquals(List.of("Adam", "Alice", "Andrew"), fpScenariosTest.startsWithFilter(namesTest, "a"));
+        assertEquals(List.of("Bob", "Brook"), fpScenariosTest.startsWithFilter(namesTest, "b"));
+        assertNotEquals(List.of("Bob", "Brook","Anthony"), fpScenariosTest.startsWithFilter(namesTest, "b"));
 //        fail("Not implemented yet");  //  explicitly fails the test
     }
 
@@ -35,7 +37,7 @@ class FPScenariosTest {
     void getEvenNumbers() {
         assertAll(() -> assertEquals(List.of(2, 4, 6), fpScenariosTest.getEvenNumbers(numbersTest)),
                 () -> assertEquals(List.of(10, 14, 50), fpScenariosTest.getEvenNumbers(List.of(10, 50, 35, 23, 14))),
-                () -> assertNotEquals(List.of(14, 10, 50), fpScenariosTest.getEvenNumbers(List.of(10, 50, 35, 23, 14))));
+                () -> assertNotEquals(List.of(15, 10, 50), fpScenariosTest.getEvenNumbers(List.of(10, 50, 35, 23, 14))));
     }
 
     @Test
