@@ -51,6 +51,7 @@ class FPScenariosTest {
     @Test
     void sumOfEvens() {
         assertEquals(12, fpScenariosTest.sumOfEvens(numbersTest));
+        assertNotEquals(14, fpScenariosTest.sumOfEvens(numbersTest), "Check actual list");
     }
 
     @Test
