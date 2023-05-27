@@ -1,6 +1,7 @@
 package main.java;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -95,5 +96,14 @@ public class FPScenarios {
                 .peek(e -> System.out.print(e + " "))
                 .boxed()
                 .toList();
+    }
+
+    public Optional<Integer> optionalPractice(List<Integer> numbers) {
+        return numbers.stream()
+                .distinct()
+                .sorted()
+                .filter(e -> e % 2 == 0)
+                .map(e -> e * e)
+                .max((a,b) -> Integer.compare(a,b));
     }
 }
