@@ -104,6 +104,7 @@ public class FPScenarios {
                 .sorted()
                 .filter(e -> e % 2 == 0)
                 .map(e -> e * e)
-                .max((a,b) -> Integer.compare(a,b));
+                .reduce(Integer::max);
+//                .max((a,b) -> Integer.compare(a,b));
     }
 }
