@@ -44,7 +44,7 @@ public class FPScenarios {
                 .sorted()
                 .distinct()
                 .filter(n -> n % 2 == 1)
-                .reduce(0, (n1, n2) -> n1 + n2);
+                .reduce(0, Integer::sum);
     }
 
     public List<Integer> primeNumbers(List<Integer> numbers) {
@@ -84,6 +84,7 @@ public class FPScenarios {
     public List<Integer> firstTenSquared() {
         return IntStream.range(1, 11)        //  or IntStream.rangeClosed(1,10)    //  upperBound is exclusive in range()
                 .map(n -> n * n)
+                .peek(e -> System.out.print(e + " "))
                 .boxed()
                 .toList();
     }
@@ -91,6 +92,7 @@ public class FPScenarios {
     public List<Integer> rangeSquared(int lowerBound, int upperBound) {
         return IntStream.rangeClosed(lowerBound, upperBound)    //  both bounds are inclusive in rangeClosed()
                 .map(n -> n * n)
+                .peek(e -> System.out.print(e + " "))
                 .boxed()
                 .toList();
     }
