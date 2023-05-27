@@ -26,6 +26,13 @@ public class Main {
         System.out.println("Prime numbers = " + fpScenarios.primeNumbers(numbers));
         System.out.println("Sum of all numbers = " + fpScenarios.sum(numbers));
         fpScenarios.firstTenSquared();
-        System.out.println("Max = " + Stream.of(34, 25, 657, 43, 785).max(Integer::compare).get());
+        //  785, 534, 785
+        System.out.println("Max = " + Stream.of(34, 25, 657, 43, 785, 534, 120).max(Integer::compare).get());
+        System.out.println("Even Max = " + Stream.of(34, 25, 657, 43, 785, 534, 120).filter(n -> n % 2 == 0).max(Integer::compare).get());
+        System.out.println("Odd Max = " + Stream.of(34, 25, 657, 43, 785, 534, 120).filter(n -> n % 2 == 1).max(Integer::compare).get());
+        //  25, 34, 25
+        System.out.println("Min = " + Stream.of(34, 25, 657, 43, 785, 534, 120).min(Integer::compare).get());
+        System.out.println("Even Min = " + Stream.of(34, 25, 657, 43, 785, 534, 120).filter(n -> n % 2 == 0).min(Integer::compare).get());
+        System.out.println("Odd Min = " + Stream.of(34, 25, 657, 43, 785, 534, 120).filter(n -> n % 2 == 1).min(Integer::compare).get());
     }
 }
