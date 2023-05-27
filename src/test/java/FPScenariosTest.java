@@ -28,7 +28,7 @@ class FPScenariosTest {
         //  assertEquals(expectedResult, actualResult)
         assertEquals(List.of("Adam", "Alice", "Andrew"), fpScenariosTest.startsWithFilter(namesTest, "a"));
         assertEquals(List.of("Bob", "Brook"), fpScenariosTest.startsWithFilter(namesTest, "b"));
-        assertNotEquals(List.of("Bob", "Brook","Anthony"), fpScenariosTest.startsWithFilter(namesTest, "b"));
+        assertNotEquals(List.of("Bob", "Brook", "Anthony"), fpScenariosTest.startsWithFilter(namesTest, "b"));
 //        fail("Not implemented yet");  //  explicitly fails the test
     }
 
@@ -52,6 +52,7 @@ class FPScenariosTest {
     void sumOfEvens() {
         assertEquals(12, fpScenariosTest.sumOfEvens(numbersTest));
         assertNotEquals(14, fpScenariosTest.sumOfEvens(numbersTest), "Check actual list");
+//        assertArrayEquals();
     }
 
     @Test
@@ -67,6 +68,15 @@ class FPScenariosTest {
     @Test
     void sum() {
         assertEquals(21, fpScenariosTest.sum(numbersTest));
+    }
+
+    @Test
+    @DisplayName("Squared")
+    void squared() {
+        assertAll(() -> assertEquals(List.of(4, 9, 16), fpScenariosTest.squared(List.of(2, 3, 4))),
+                () -> assertEquals(List.of(4, 9, 16), fpScenariosTest.squared(List.of(3, 2, 4))),
+                () -> assertEquals(List.of(4, 9), fpScenariosTest.squared(List.of(3, 2, 2))),
+                () -> assertNotEquals(List.of(9, 4), fpScenariosTest.squared(List.of(3, 2))));
     }
 
     @AfterEach
