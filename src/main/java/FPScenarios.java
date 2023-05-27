@@ -81,8 +81,17 @@ public class FPScenarios {
                 .collect(Collectors.toList());
     }
 
-    public void firstTenSquared() {
-        IntStream.range(1, 11).map(n -> n * n)
-                .forEach(System.out::println);
+    public List<Integer> firstTenSquared() {
+        return IntStream.range(1, 11)        //  or IntStream.rangeClosed(1,10)    //  upperBound is exclusive in range()
+                .map(n -> n * n)
+                .boxed()
+                .toList();
+    }
+
+    public List<Integer> rangeSquared(int lowerBound, int upperBound) {
+        return IntStream.rangeClosed(lowerBound, upperBound)    //  both bounds are inclusive in rangeClosed()
+                .map(n -> n * n)
+                .boxed()
+                .toList();
     }
 }
