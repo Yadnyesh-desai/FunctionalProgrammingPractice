@@ -2,6 +2,7 @@ package main.java;
 
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class FPScenarios {
 
@@ -78,5 +79,10 @@ public class FPScenarios {
                 .sorted()
                 .map(n -> n * n)
                 .collect(Collectors.toList());
+    }
+
+    public void firstTenSquared() {
+        IntStream.range(1, 11).map(n -> n * n)
+                .forEach(System.out::println);
     }
 }

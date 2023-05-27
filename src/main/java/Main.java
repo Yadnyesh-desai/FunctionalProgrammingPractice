@@ -2,6 +2,7 @@ package main.java;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
@@ -24,5 +25,7 @@ public class Main {
         System.out.println("Sum of odd numbers = " + fpScenarios.sumOfOdds(numbers));
         System.out.println("Prime numbers = " + fpScenarios.primeNumbers(numbers));
         System.out.println("Sum of all numbers = " + fpScenarios.sum(numbers));
+        fpScenarios.firstTenSquared();
+        System.out.println("Max = " + Stream.of(34, 25, 657, 43, 785).max(Integer::compare).get());
     }
 }
